@@ -12,6 +12,7 @@ import Cart from "./components/user/cart/Cart";
 import UserProfile from "./pages/user/user-profile/UserProfile";
 import { CartProvider } from "./hooks/useCartContext";
 
+// add log
 function App() {
   return (
     <Router>
