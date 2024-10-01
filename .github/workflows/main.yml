@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Check out the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '22'
+          node-version: "lts/*"
 
       - name: Install dependencies
         run: npm install
@@ -24,10 +24,11 @@ jobs:
       - name: Build the app
         run: npm run build
 
-      - name: Semantic Release (versioning & changelog)
-        run: npx semantic-release
+      - name: Release
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Asegúrate de usar el token de acceso personal aquí
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
 
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
