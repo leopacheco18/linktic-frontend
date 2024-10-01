@@ -6,12 +6,11 @@ import {
   Col,
   Flex,
   Image,
-  Input,
   InputNumber,
   Row,
   message,
 } from "antd";
-import { CloseCircleFilled, DeleteOutlined } from "@ant-design/icons";
+import { CloseCircleFilled } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
 import OrdersService from "../../../services/OrdersService";
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Products.css";
 import ProductsService from "../../../services/ProductsService";
-import { Button, Col, Flex, Row } from "antd";
+import { Button, Flex } from "antd";
 import ProductCard from "../../../components/common/ProductCard";
 import { PlusCircleOutlined, RollbackOutlined } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
@@ -31,6 +31,7 @@ const Products = () => {
   useEffect(() => {
     getProducts();
     checkAdmin();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

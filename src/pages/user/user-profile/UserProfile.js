@@ -3,7 +3,6 @@ import OrdersService from "../../../services/OrdersService";
 import { Button, Flex, Table } from "antd";
 import { useCartContext } from "../../../hooks/useCartContext";
 import { Link, useNavigate } from "react-router-dom";
-import AuthService from "../../../services/AuthService";
 
 const columns = [
   {
@@ -48,6 +47,7 @@ const UserProfile = () => {
   useEffect(() => {
     getOrders();
     checkAdmin();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const logout = () => {

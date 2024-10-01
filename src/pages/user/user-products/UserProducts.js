@@ -7,7 +7,7 @@ import './UserProducts.css'
 import ProductCard from "../../../components/common/ProductCard";
 
 const UserProducts = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   const categoryId = searchParams.get("categoryId");
   const productName = searchParams.get("productName");
@@ -47,6 +47,7 @@ const UserProducts = () => {
 
     getCategories();
     getProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoryId, productName]);
 
   return (

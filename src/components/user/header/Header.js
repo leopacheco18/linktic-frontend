@@ -50,7 +50,7 @@ const Header = () => {
   };
 
   const register = async (values) => {
-    const response = await AuthService.register(values);
+    await AuthService.register(values);
     loginRequest(values.email, values.password);
   };
 

@@ -41,6 +41,7 @@ const ProductCreate = () => {
 
   useEffect(() => {
     checkAdmin();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onFinish = async (values) => {
@@ -143,6 +144,7 @@ const ProductCreate = () => {
     if (productId) {
       getProductById(productId);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productId]);
 
   const getArr = () => {

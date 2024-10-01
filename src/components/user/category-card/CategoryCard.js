@@ -16,12 +16,8 @@ const CategoryCard = ({ category, to, className, subclassName }) => {
       }
     }
     setPath(path)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [subclassName, localStorage.getItem("product_name")]);
-
-  useEffect(() => {
-    if (localStorage.getItem("product_name")) {
-    }
-  }, []);
 
   return (
     <div className={`category-card-container ${className}`}>
