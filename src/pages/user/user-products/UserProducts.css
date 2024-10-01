@@ -1,0 +1,29 @@
+.category-all-products-container {
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+
+.category-card-all-products {
+    border-radius: 10px;
+    border: 1px solid black;
+    min-height: 125px;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1rem;
+    background-color: white;
+    transition: all ease-in-out 0.5s;
+    display: flex;
+  }
+  
+  .category-card-all-products:hover {
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  .category-card-all-products-active {
+    background-color: black !important;
+    color: white !important;
+  }

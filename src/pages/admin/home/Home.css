@@ -1,0 +1,11 @@
+
+
+@media only screen and (max-width: 768px) {
+    .option-container{
+        flex-direction: column;
+        gap: 10px !important;
+        justify-content: unset;
+        align-items: unset;
+        margin-bottom: 3rem;
+    }
+}

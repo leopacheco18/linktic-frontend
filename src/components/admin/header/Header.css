@@ -1,0 +1,54 @@
+.m-header{
+    margin: 15px 0;
+}
+
+.divider{
+    color: white !important;
+    border-block-start-color: white !important;
+    margin-bottom: 0 !important;
+}
+
+.divider::before{
+    transform: translateY(0) !important;
+}
+.divider::after{
+    transform: translateY(0) !important;
+}
+
+.options{
+    background-color: #00727a;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.btn-header-admin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.options > a {
+    text-decoration: none;
+    color: white;
+    background-color: #f4faff;
+    height: fit-content;
+    line-height: 40px;
+    padding: 0 30px;
+    border-radius: 20px;
+    margin: 10px 0;
+    color: #00415a;
+    transition: all ease-in-out 0.5s;
+    font-size: 1rem;
+}
+
+.options > a:hover {
+    color: #f4faff !important;
+    background-color: #00415a !important;
+}
+
+.active {
+    color: #f4faff !important;
+    background-color: #00415a !important;
+}
