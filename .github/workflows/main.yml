@@ -8,6 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write 
+      issues: write 
+      pull-requests: write 
+      id-token: write 
 
     steps:
       - name: Check out the code
