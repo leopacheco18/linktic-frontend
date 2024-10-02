@@ -15,7 +15,7 @@ import { Link, useNavigate } from "react-router-dom";
 import OrdersService from "../../../services/OrdersService";
 
 const Cart = () => {
-  const { getTotalProducts, cart, changeQuantity, removeFromCart, emptyCart } =
+  const { getTotalProducts, cart, changeQuantity, removeFromCart, emptyCart, isLogged } =
     useCartContext();
 
   const [messageApi, contextHolder] = message.useMessage();
@@ -142,7 +142,7 @@ const Cart = () => {
           </div>
           <Button
             block
-            disabled={cart.length === 0 || blockBtn}
+            disabled={cart.length === 0 || blockBtn || !isLogged}
             onClick={generateOrder}
           >
             Generar Orden
